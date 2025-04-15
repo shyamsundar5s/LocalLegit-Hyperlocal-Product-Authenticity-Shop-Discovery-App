@@ -1,0 +1,15 @@
+CREATE TABLE shops (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  latitude FLOAT NOT NULL,
+  longitude FLOAT NOT NULL,
+  category VARCHAR(100),
+  rating FLOAT DEFAULT 0schema
+);
+
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  email VARCHAR(255) UNIQUE NOT NULL,
+  password_hash VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
